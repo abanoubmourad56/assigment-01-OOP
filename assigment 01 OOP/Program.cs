@@ -22,7 +22,100 @@ namespace assigment_01_OOP
             //b) How can private fields and public properties improve this design?
             //Use private fields with public properties.This hides the internal data and allows us to control access and add validation when needed.
 
+            // part 2 partical 
+            /*
+            using System;
 
+public struct DeliveryAddress
+{
+    public string City;
+    public string Street;
+    public int BuildingNumber;
+
+    public DeliveryAddress(string city, string street, int buildingNumber)
+    {
+        City = city;
+        Street = street;
+        BuildingNumber = buildingNumber;
+    }
+
+    public string GetFullAddress()
+    {
+        return $"{BuildingNumber}, {Street}, {City}";
     }
 }
+
+public struct Shipment
+{
+    private string trackingCode;
+    private string description;
+    private double weight;
+    private decimal deliveryFee;
+
+    public string TrackingCode
+    {
+        get { return trackingCode; }
+    }
+
+    public string Description
+    {
+        get { return description; }
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+                description = value;
+        }
+    }
+
+    public double Weight
+    {
+        get { return weight; }
+        set
+        {
+            if (value > 0)
+                weight = value;
+        }
+    }
+
+    public decimal DeliveryFee
+    {
+        get { return deliveryFee; }
+        private set
+        {
+            if (value > 0)
+                deliveryFee = value;
+        }
+    }
+
+    public DeliveryAddress Destination { get; set; }
+
+    public decimal EstimatedCost
+    {
+        get
+        {
+            return DeliveryFee + ((decimal)Weight * 5);
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        DeliveryAddress address1 =
+            new DeliveryAddress("Cairo", "Main Street", 10);
+
+        DeliveryAddress address2 = address1;
+
+        address2.City = "Alexandria";
+
+        Console.WriteLine(address1.GetFullAddress());
+        Console.WriteLine(address2.GetFullAddress());
+    }
+}
+            */
+
+
+        }
+    }
 }
