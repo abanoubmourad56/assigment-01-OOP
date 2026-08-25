@@ -1,4 +1,6 @@
-﻿using System.Security.Principal;
+﻿using System.Runtime.Intrinsics.X86;
+using System.Security.Principal;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace assigment_01_OOP
 {
@@ -17,8 +19,10 @@ namespace assigment_01_OOP
             // There is no control or validation over the values.
             //The internal data is exposed, which breaks encapsulation.
 
+            //b) How can private fields and public properties improve this design?
+            //Use private fields with public properties.This hides the internal data and allows us to control access and add validation when needed.
 
 
     }
-    }
+}
 }
